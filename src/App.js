@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route, NavLink, useLocation } from 'react-router-dom';
 
-import styles from './index.scss';
+import './App.css';
 
 import Header from './components/Header';
 import MenuPage from './components/Menu';

@@ -1,9 +1,11 @@
 import React from 'react';
-import styles from '../index.scss';
+import styles from '../index.module.scss';
+
+import data from '../mockData/data.json';
 
 const MenuPage = () => {
    // const activeShop = useContext((state) => state.activeShop);
-
+   console.log(data);
    return (
       <>
          <section className={styles.shopsList}>

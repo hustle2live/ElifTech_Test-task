@@ -6,20 +6,28 @@ body {
    -moz-osx-font-smoothing: grayscale;
 }
 
-.headerMenu {
+.header {
    display: block;
    width: 100%;
-   min-height: 120px;
+   min-height: 60px;
    padding: 15px 40px;
+
+   &__navmenu {
+      display: flex;
+   }
+
+   li {
+      list-style-type: none;
+   }
+
+   &__navLink {
+      padding: 5px;
+      margin: auto 10px;
+   }
 }
 
 .currentShopContent {
 }
 
 .shopsList {
-}
-
-.navLink {
-  color: blue;
-  margin: auto 10px;
 }
