@@ -51,7 +51,7 @@ const MenuPage = () => {
                         alt={NAME}
                      />
                      <div className={styles.shopMenu__item_frame}>
-                        <h3 className={styles.shopMenu__item_name}>{NAME}</h3>
+                        <h4 className={styles.shopMenu__item_name}>{NAME}</h4>
                         <p className={styles.shopMenu__item_price}>{PRICE}</p>
                         <button className={styles.shopMenu__item_button}>Add to Cart</button>
                      </div>

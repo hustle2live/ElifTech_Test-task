@@ -75,11 +75,13 @@ body {
 
    &__item {
       display: flex;
-      width: 330px;
-      height: 150px;
+      flex-direction: column;
+
+      width: 300px;
+      height: 270px;
       border-radius: 20px;
       margin: 15px 0 10px 20px;
-      padding: 12px;
+      padding: 12px 8px;
 
       &:nth-child(n) {
          background: rgba(122, 179, 243, 0.2);
@@ -95,24 +97,40 @@ body {
          background: rgba(120, 247, 187, 0.2);
       }
 
+      &_frame {
+         display: flex;
+         flex-direction: column;
+         align-items: flex-start;
+         padding: 0px;
+         width: auto;
+         height: 136px;
+         left: 168.92px;
+         top: 42.63px;
+         margin: 12px 18px;
+
+         h4 {
+            width: 100%;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 3;
+            overflow: hidden;
+         }
+      }
+
       &_name {
          width: 158px;
          font-family: Poppins;
          font-style: normal;
          font-weight: normal;
          font-size: 18px;
-         line-height: 20px;
+         line-height: 18px;
          color: #000000;
-
-         white-space: nowrap;
-         overflow: hidden;
-         text-overflow: ellipsis;
-         max-height: 50px;
          padding-right: 10px;
+         margin: 0;
       }
 
       &_price {
-         width: 180px;
+         width: 158px;
          font-weight: bold;
          font-size: 24px;
          line-height: 32px;
@@ -132,18 +150,6 @@ body {
          border-radius: 50%;
       }
 
-      &_frame {
-         display: flex;
-         flex-direction: column;
-         align-items: flex-start;
-         padding: 0px;
-         width: 158px;
-         height: 136px;
-         left: 168.92px;
-         top: 42.63px;
-         margin-left: 18px;
-      }
-
       &_button {
          display: flex;
          flex-direction: row;
@@ -159,6 +165,9 @@ body {
          border-radius: 20px;
          border: #d7d6fc;
          cursor: pointer;
+         margin-bottom: 0;
+         align-self: flex-end;
+         justify-self: flex-end;
          &:hover {
             background-color: #a5a5a571;
             color: #6b00f5;
