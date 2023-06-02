@@ -28,8 +28,11 @@ const MenuPage = () => {
                {menuNames.map((name) => {
                   const selected = name === activeShop ? 'active' : '';
                   return (
-                     <li className={`${styles.shopList__listElement} ${selected}`} key={name}
-                     onClick={() => setActiveShop(name)} >
+                     <li
+                        className={`${styles.shopList__listElement} ${selected}`}
+                        key={name}
+                        onClick={() => setActiveShop(name)}
+                     >
                         {name}
                      </li>
                   );
@@ -37,20 +40,24 @@ const MenuPage = () => {
             </ul>
          </section>
          <section className={styles.shopMenu}>
-            {menues[activeShop].map(({ NAME, PRICE, IMG_SRC }) => (
-               <div className={styles.shopMenu__item} key={NAME}>
-                  <img
-                     className={styles.shopMenu__item_image}
-                     src={IMG_SRC ? `../mockData/${IMG_SRC}` : Plate}
-                     alt={NAME}
-                  />
-                  <div className={styles.shopMenu__item_frame}>
-                     <h3 className={styles.shopMenu__item_name}>{NAME}</h3>
-                     <p className={styles.shopMenu__item_price}>{PRICE}</p>
-                     <button className={styles.shopMenu__item_button}>Add to Cart</button>
+            {menues[activeShop].map(({ NAME, PRICE, IMG_SRC }) => {
+               const MenuImage = IMG_SRC ? require(`../mockData/${IMG_SRC}`) : Plate;
+
+               return (
+                  <div className={styles.shopMenu__item} key={NAME}>
+                     <img
+                        className={styles.shopMenu__item_image}
+                        src={MenuImage}
+                        alt={NAME}
+                     />
+                     <div className={styles.shopMenu__item_frame}>
+                        <h3 className={styles.shopMenu__item_name}>{NAME}</h3>
+                        <p className={styles.shopMenu__item_price}>{PRICE}</p>
+                        <button className={styles.shopMenu__item_button}>Add to Cart</button>
+                     </div>
                   </div>
-               </div>
-            ))}
+               );
+            })}
          </section>
       </div>
    );

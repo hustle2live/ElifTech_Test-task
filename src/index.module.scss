@@ -37,7 +37,11 @@ body {
    display: flex;
    flex-direction: column;
    flex-basis: 30%;
-   // align-items: center;
+   flex-grow: 0;
+
+   ul {
+      padding-left: 0;
+   }
 
    &__heading,
    &__listElement {
@@ -56,7 +60,7 @@ body {
       border-radius: 16px;
       padding: 18px 40px;
       cursor: pointer;
-      &:hover{
+      &:hover {
          background-color: #c1c1c1;
          color: Orangered;
       }
@@ -65,16 +69,16 @@ body {
 
 .shopMenu {
    flex-basis: 60%;
+   flex-grow: 1;
    display: flex;
    flex-wrap: wrap;
-   margin-left: 20px;
 
    &__item {
       display: flex;
       width: 330px;
       height: 150px;
       border-radius: 20px;
-      margin: 15px auto 25px 0;
+      margin: 15px 0 10px 20px;
       padding: 12px;
 
       &:nth-child(n) {
@@ -99,6 +103,12 @@ body {
          font-size: 18px;
          line-height: 20px;
          color: #000000;
+
+         white-space: nowrap;
+         overflow: hidden;
+         text-overflow: ellipsis;
+         max-height: 50px;
+         padding-right: 10px;
       }
 
       &_price {
@@ -108,7 +118,7 @@ body {
          line-height: 32px;
          color: #000;
          margin: 0 0 14px 0;
-         &::before{
+         &::before {
             content: '$';
          }
       }
