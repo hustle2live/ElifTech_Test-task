@@ -1,0 +1,198 @@
+[
+    {
+        "McDonalds": [
+            {
+                "ITEM": "Bacon Clubhouse Burger 9.7 oz (274 g)",
+                "PRICE": "3.44",
+                "IMG_SRC": ""
+            },
+            {
+                "PRICE": "4.5",
+                "ITEM": "Premium Grilled Chicken Bacon Clubhouse Sandwich 10 oz (285 g)",
+                "IMG_SRC": ""
+            },
+            {
+                "PRICE": "4.0",
+                "ITEM": "Premium Buttermilk Crispy Chicken Bacon Clubhouse Sandwich 10.1 oz (287 g)",
+                "IMG_SRC": ""
+            },
+            {
+                "PRICE": "1.4",
+                "ITEM": "McChicken \u00ae 5.1 oz (144 g)",
+                "IMG_SRC": ""
+            },
+            {
+                "PRICE": "1.4",
+                "ITEM": "Buffalo Ranch McChicken 5.2 oz (148 g)",
+                "IMG_SRC": ""
+            },
+            {
+                "PRICE": "2.0",
+                "ITEM": "Bacon Buffalo Ranch McChicken 5.7 oz (162 g)",
+                "IMG_SRC": ""
+            },
+            {
+                "PRICE": "2.2",
+                "ITEM": "Bacon Cheddar McChicken 6.1 oz (172 g)",
+                "IMG_SRC": ""
+            },
+            {
+                "PRICE": "2.5",
+                "ITEM": "Southern Style Buttermilk Crispy Chicken Sandwich 5.7 oz (162 g)",
+                "IMG_SRC": ""
+            }
+        ]
+    },
+    {
+        "KFC": [
+            {
+                "PRICE": "15",
+                "ITEM": "Filet-O-Fish 5 oz (142 g)",
+                "IMG_SRC": ""
+            },
+            {
+                "PRICE": "12.2",
+                "ITEM": "McRib \u00ae 7.3 oz (208 g)",
+                "IMG_SRC": ""
+            },
+            {
+                "PRICE": "13.6",
+                "ITEM": "Premium McWrap Chicken & Bacon (Buttermilk Crispy) 11.1 oz (314 g)",
+                "IMG_SRC": ""
+            },
+            {
+                "PRICE": "14.1",
+                "ITEM": "Premium McWrap Chicken & Bacon (Grilled) 11 oz (312 g)",
+                "IMG_SRC": ""
+            },
+            {
+                "PRICE": "13.1",
+                "ITEM": "Premium McWrap Chicken & Ranch (Buttermilk Crispy) 10.9 oz (309 g)",
+                "IMG_SRC": ""
+            },
+            {
+                "PRICE": "13.5",
+                "ITEM": "Premium McWrap Chicken & Ranch (Grilled) 10.8 oz (306 g)",
+                "IMG_SRC": ""
+            },
+            {
+                "PRICE": "12.7",
+                "ITEM": "Premium McWrap Chicken Sweet Chili (Buttermilk Crispy) 10.6 oz (301 g)",
+                "IMG_SRC": ""
+            }
+        ]
+    },
+    {
+        "HomeCafe": [
+            {
+                "ITEM": "French Fries with Ketchup",
+                "PRICE": "2.23",
+                "IMG_SRC": "images/plate__french-fries.png"
+            },
+            {
+                "ITEM": "Salmon and Vegetables",
+                "PRICE": "5.12",
+                "IMG_SRC": "images/plate__salmon-vegetables.png"
+            },
+            {
+                "ITEM": "Spaghetti with Sauce",
+                "PRICE": "7.82",
+                "IMG_SRC": "images/plate__spaghetti-meat-sauce.png"
+            },
+            {
+                "ITEM": "Breakfast with eggs and bacon",
+                "PRICE": "4.50",
+                "IMG_SRC": "images/plate__bacon-eggs.png"
+            },
+            {
+                "ITEM": "Fish sticks fries",
+                "PRICE": "8.24",
+                "IMG_SRC": "images/plate__fish-sticks-fries.png"
+            },
+            {
+                "ITEM": "Chicken salad menu",
+                "PRICE": "4.65",
+                "IMG_SRC": "images/plate__chicken-salad.png"
+            },
+            {
+                "ITEM": "Tortellini",
+                "PRICE": "3.95",
+                "IMG_SRC": "images/plate__tortellini.png"
+            },
+            {
+                "ITEM": "Ravioli menu",
+                "PRICE": "3.20",
+                "IMG_SRC": "images/plate__ravioli.png"
+            }
+        ]
+    },
+    {
+        "Hesburger": [
+            {
+                "PRICE": "3.1",
+                "ITEM": "Premium McWrap Chicken Sweet Chili (Grilled) 10.4 oz (294 g)",
+                "IMG_SRC": ""
+            },
+            {
+                "PRICE": "2.5",
+                "ITEM": "Big Mac 7.5 oz (212 g)",
+                "IMG_SRC": ""
+            },
+            {
+                "PRICE": "3.1",
+                "ITEM": "Quarter Pounder\u00ae with Cheese 7.3 oz (206 g)",
+                "IMG_SRC": ""
+            },
+            {
+                "PRICE": "5.0",
+                "ITEM": "Double Quarter Pounder with Cheese 10.3 oz (291 g)",
+                "IMG_SRC": ""
+            },
+            {
+                "PRICE": "12",
+                "ITEM": "Hamburger 3.5 oz (99 g)",
+                "IMG_SRC": ""
+            },
+            {
+                "PRICE": "1.5",
+                "ITEM": "Cheeseburger 4 oz (113 g)",
+                "IMG_SRC": ""
+            },
+            {
+                "PRICE": "1.5",
+                "ITEM": "BBQ Ranch Burger 4 oz (114 g)",
+                "IMG_SRC": ""
+            },
+            {
+                "PRICE": "1.5",
+                "ITEM": "Grilled Onion Cheddar 4 oz (114 g)",
+                "IMG_SRC": ""
+            },
+            {
+                "PRICE": "2.5",
+                "ITEM": "Double Cheeseburger 5.7 oz (163 g)",
+                "IMG_SRC": ""
+            },
+            {
+                "PRICE": "2.2",
+                "ITEM": "McDouble 5.2 oz (148 g)",
+                "IMG_SRC": ""
+            },
+            {
+                "PRICE": "2.8",
+                "ITEM": "Bacon McDouble 5.7 oz (162 g)",
+                "IMG_SRC": ""
+            },
+            {
+                "PRICE": "2.2",
+                "ITEM": "Daily Double 6.8 oz (191 g)",
+                "IMG_SRC": ""
+            },
+            {
+                "PRICE": "1.6",
+                "ITEM": "Ranch Snack Wrap\u00ae (Buttermilk Crispy) 4.6 oz (129 g)",
+                "IMG_SRC": ""
+            }
+        ]
+    }
+]
