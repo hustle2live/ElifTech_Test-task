@@ -7,10 +7,11 @@ body {
 }
 
 .header {
-   display: block;
+   display: flex;
+   align-items: center;
    width: 100%;
-   min-height: 60px;
-   padding: 15px 40px;
+   height: 80px;
+   box-sizing: border-box;
 
    &__navmenu {
       display: flex;
@@ -31,6 +32,7 @@ body {
 
 .wrapper {
    display: flex;
+   height: calc(100vh - 80px);
 }
 
 .shopList {
@@ -72,6 +74,8 @@ body {
    flex-grow: 1;
    display: flex;
    flex-wrap: wrap;
+   height: 100%;
+   overflow-y: scroll;
 
    &__item {
       display: flex;
@@ -80,7 +84,7 @@ body {
       width: 300px;
       height: 270px;
       border-radius: 20px;
-      margin: 15px 0 10px 20px;
+      margin: 10px 0 10px 20px;
       padding: 12px 8px;
 
       &:nth-child(n) {
@@ -112,13 +116,14 @@ body {
             width: 100%;
             display: -webkit-box;
             -webkit-box-orient: vertical;
-            -webkit-line-clamp: 3;
+            -webkit-line-clamp: 2;
             overflow: hidden;
          }
       }
 
       &_name {
          width: 158px;
+         height: 36px;
          font-family: Poppins;
          font-style: normal;
          font-weight: normal;
@@ -142,12 +147,15 @@ body {
       }
 
       &_image {
+         display: block;
+         content: '';
          margin-top: -18px;
          margin-left: -12px;
          width: 148px;
          height: 145px;
          filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
          border-radius: 50%;
+         box-sizing: border-box;
       }
 
       &_button {
