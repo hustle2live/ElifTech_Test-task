@@ -9,21 +9,14 @@ import Plate from '../mockData/images/plate.png';
 import { dishAdded, dishRemoved, moreDish, lessDish } from '../redux/cartReducer';
 
 const MenuPage = () => {
-   // const activeShop = useContext((state) => state.activeShop);
-   // console.log(data);
-
    const shopMenu = data;
    const shopNames = Object.keys(shopMenu);
-
-   // console.log(shopMenu);
-   // console.log(shopNames);
 
    const [activeShop, setActiveShop] = useState(shopNames[0]);
    const dispatch = useDispatch();
    const cartState = useSelector((store) => store.cart);
 
    console.log(cartState);
-   // console.log(activeShop);
 
    return (
       <div className={styles.wrapper}>

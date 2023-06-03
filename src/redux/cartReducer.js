@@ -18,6 +18,12 @@ const cartSlice = createSlice({
          state.cart = state.cart.filter((item) => item.NAME !== action.payload);
       },
 
+      setQuantity(state, action) {
+         state.cart = state.cart.map((item) =>
+            item.NAME === action.payload.name ? { ...item, QUANTITY: +action.payload.count } : item
+         );
+      },
+
       moreDish(state, action) {
          state.cart = state.cart.map((item) =>
             item.NAME === action.payload ? { ...item, QUANTITY: item.QUANTITY + 1 } : item
@@ -44,6 +50,6 @@ const cartSlice = createSlice({
    }
 });
 
-export const { dishAdded, dishRemoved, moreDish, lessDish } = cartSlice.actions;
+export const { dishAdded, dishRemoved, moreDish, lessDish, setQuantity } = cartSlice.actions;
 
 export default cartSlice.reducer;
