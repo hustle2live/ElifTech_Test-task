@@ -3,8 +3,6 @@ import { NavLink } from 'react-router-dom';
 import styles from '../index.module.scss';
 
 const Header = () => {
-   // let url = useLocation();
-
    return (
       <div className={styles.header}>
          <nav>

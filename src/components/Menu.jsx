@@ -6,7 +6,7 @@ import styles from '../index.module.scss';
 import data from '../mockData/data.json';
 import Plate from '../mockData/images/plate.png';
 
-import { dishAdded, dishRemoved, moreDish, lessDish } from '../redux/cartReducer';
+import { dishAdded, dishRemoved } from '../redux/cartReducer';
 
 const MenuPage = () => {
    const shopMenu = data;
@@ -15,8 +15,6 @@ const MenuPage = () => {
    const [activeShop, setActiveShop] = useState(shopNames[0]);
    const dispatch = useDispatch();
    const cartState = useSelector((store) => store.cart);
-
-   console.log(cartState);
 
    return (
       <div className={styles.wrapper}>
@@ -60,7 +58,7 @@ const MenuPage = () => {
                               onClick={(e) => dispatch(dishRemoved(NAME))}
                            >
                               Delete
-                                 <span className='material-symbols-outlined'>done</span>
+                              <span className='material-symbols-outlined'>done</span>
                            </button>
                         )}
                      </div>

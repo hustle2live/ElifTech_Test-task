@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { useForm } from 'react-hook-form';
 
 import { dishRemoved, setQuantity, getTotalPrice, orderRegister } from '../redux/cartReducer';
 
@@ -35,8 +34,6 @@ const ShoppingCart = () => {
          amount: cartTotal.toFixed(2)
       };
 
-      // console.log(userOrder);
-      // console.log(JSON.stringify(userOrder));
       dispatch(orderRegister(userOrder));
    };
 
