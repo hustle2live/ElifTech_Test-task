@@ -3,7 +3,8 @@ import { createSlice } from '@reduxjs/toolkit';
 const initialState = {
    cart: [],
    client: null,
-   summary: 0
+   total: 0,
+   orders: []
 };
 
 const cartSlice = createSlice({
@@ -24,32 +25,24 @@ const cartSlice = createSlice({
          );
       },
 
-      moreDish(state, action) {
-         state.cart = state.cart.map((item) =>
-            item.NAME === action.payload ? { ...item, QUANTITY: item.QUANTITY + 1 } : item
-         );
+      getTotalPrice(state) {
+         const countTotalPrice =
+            state.cart.length > 0
+               ? state.cart.reduce((acc, { PRICE, QUANTITY }) => {
+                    acc += PRICE * QUANTITY;
+                    return Math.round(acc * 100) / 100;
+                 }, 0)
+               : 0;
+
+         state.total = countTotalPrice;
       },
 
-      lessDish(state, action) {
-         state.cart = state.cart.map((item) => {
-            if (item.NAME === action.payload) return --item.QUANTITY;
-         });
-      },
-
-      todoToggled(state, action) {
-         const todo = state.entities.find((todo) => todo.id === action.payload);
-         todo.completed = !todo.completed;
-      },
-
-      todosLoading(state, action) {
-         return {
-            ...state,
-            status: 'loading'
-         };
+      orderRegister(state, action) {
+         state.orders.push(action.payload);
       }
    }
 });
 
-export const { dishAdded, dishRemoved, moreDish, lessDish, setQuantity } = cartSlice.actions;
+export const { dishAdded, dishRemoved, setQuantity, getTotalPrice, orderRegister } = cartSlice.actions;
 
 export default cartSlice.reducer;
