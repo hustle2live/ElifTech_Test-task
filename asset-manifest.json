@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/eliftech-test/static/css/main.00249f20.css",
-    "main.js": "/eliftech-test/static/js/main.49fdb0d7.js",
+    "main.css": "/eliftech-test/static/css/main.db2104f7.css",
+    "main.js": "/eliftech-test/static/js/main.6b2e745f.js",
     "static/js/787.4595100f.chunk.js": "/eliftech-test/static/js/787.4595100f.chunk.js",
     "static/media/plate__chicken-salad.png": "/eliftech-test/static/media/plate__chicken-salad.79e3dd16e66cd1b26a05.png",
     "static/media/plate__salmon-vegetables.png": "/eliftech-test/static/media/plate__salmon-vegetables.ae879edfef92f9068c8b.png",
@@ -18,12 +18,12 @@
     "index.html": "/eliftech-test/index.html",
     "static/media/chevron.svg": "/eliftech-test/static/media/chevron.f09ad78c70c23903872b.svg",
     "static/media/check.svg": "/eliftech-test/static/media/check.808cd56442374a9032e7.svg",
-    "main.00249f20.css.map": "/eliftech-test/static/css/main.00249f20.css.map",
-    "main.49fdb0d7.js.map": "/eliftech-test/static/js/main.49fdb0d7.js.map",
+    "main.db2104f7.css.map": "/eliftech-test/static/css/main.db2104f7.css.map",
+    "main.6b2e745f.js.map": "/eliftech-test/static/js/main.6b2e745f.js.map",
     "787.4595100f.chunk.js.map": "/eliftech-test/static/js/787.4595100f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.00249f20.css",
-    "static/js/main.49fdb0d7.js"
+    "static/css/main.db2104f7.css",
+    "static/js/main.6b2e745f.js"
   ]
 }
