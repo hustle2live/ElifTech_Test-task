@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import { dishRemoved, setQuantity, getTotalPrice, orderRegister } from '../redux/cartReducer';
 
-import Plate from '../mockData/images/plate.png';
+import Plate from '../images/plate.png';
 import styles from '../index.module.scss';
 
 const ShoppingCart = () => {
@@ -59,7 +59,7 @@ const ShoppingCart = () => {
             </div>
             <div className={styles.cart_wrapper__cartSection}>
                {cartState.map(({ NAME, PRICE, IMG_SRC, QUANTITY }) => {
-                  const MenuImage = IMG_SRC ? require(`../mockData/${IMG_SRC}`) : Plate;
+                  const MenuImage = IMG_SRC ? require(IMG_SRC) : Plate;
                   const itemPrice = Math.round(PRICE * QUANTITY * 100) / 100;
 
                   return (

@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import styles from '../index.module.scss';
 import data from '../mockData/data.json';
-import Plate from '../mockData/images/plate.png';
+import Plate from '../images/plate.png';
 
 import { dishAdded, dishRemoved } from '../redux/cartReducer';
 
@@ -37,7 +37,7 @@ const MenuPage = () => {
          </section>
          <section className={styles.shopMenu}>
             {shopMenu[activeShop].map(({ NAME, PRICE, IMG_SRC }) => {
-               const MenuImage = IMG_SRC ? require(`../mockData/${IMG_SRC}`) : Plate;
+               const MenuImage = IMG_SRC ? require(`../${IMG_SRC}`) : Plate;
 
                return (
                   <div className={styles.shopMenu__item} key={NAME}>

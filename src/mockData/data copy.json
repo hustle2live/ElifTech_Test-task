@@ -87,42 +87,42 @@
             {
                 "ITEM": "French Fries with Ketchup",
                 "PRICE": "2.23",
-                "IMG_SRC": "images/plate__french-fries.png"
+                "IMG_SRC": "../images/plate__french-fries.png"
             },
             {
                 "ITEM": "Salmon and Vegetables",
                 "PRICE": "5.12",
-                "IMG_SRC": "images/plate__salmon-vegetables.png"
+                "IMG_SRC": "../images/plate__salmon-vegetables.png"
             },
             {
                 "ITEM": "Spaghetti with Sauce",
                 "PRICE": "7.82",
-                "IMG_SRC": "images/plate__spaghetti-meat-sauce.png"
+                "IMG_SRC": "../images/plate__spaghetti-meat-sauce.png"
             },
             {
                 "ITEM": "Breakfast with eggs and bacon",
                 "PRICE": "4.50",
-                "IMG_SRC": "images/plate__bacon-eggs.png"
+                "IMG_SRC": "../images/plate__bacon-eggs.png"
             },
             {
                 "ITEM": "Fish sticks fries",
                 "PRICE": "8.24",
-                "IMG_SRC": "images/plate__fish-sticks-fries.png"
+                "IMG_SRC": "../images/plate__fish-sticks-fries.png"
             },
             {
                 "ITEM": "Chicken salad menu",
                 "PRICE": "4.65",
-                "IMG_SRC": "images/plate__chicken-salad.png"
+                "IMG_SRC": "../images/plate__chicken-salad.png"
             },
             {
                 "ITEM": "Tortellini",
                 "PRICE": "3.95",
-                "IMG_SRC": "images/plate__tortellini.png"
+                "IMG_SRC": "../images/plate__tortellini.png"
             },
             {
                 "ITEM": "Ravioli menu",
                 "PRICE": "3.20",
-                "IMG_SRC": "images/plate__ravioli.png"
+                "IMG_SRC": "../images/plate__ravioli.png"
             }
         ]
     },
