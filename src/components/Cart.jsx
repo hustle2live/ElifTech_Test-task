@@ -59,7 +59,7 @@ const ShoppingCart = () => {
             </div>
             <div className={styles.cart_wrapper__cartSection}>
                {cartState.map(({ NAME, PRICE, IMG_SRC, QUANTITY }) => {
-                  const MenuImage = IMG_SRC ? require(`../images/${IMG_SRC}`) : Plate;
+                  const MenuImage = IMG_SRC ? require(`./${IMG_SRC}`) : Plate;
                   const itemPrice = Math.round(PRICE * QUANTITY * 100) / 100;
 
                   return (

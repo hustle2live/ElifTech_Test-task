@@ -5,8 +5,6 @@ import { Fragment } from 'react';
 import { Disclosure, Menu, Transition } from '@headlessui/react';
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline';
 
-import LogoImage from '../images/logo-rest-1.png';
-
 import styles from '../index.module.scss';
 
 const Header = () => {
@@ -41,8 +39,7 @@ const Header = () => {
                      </div>
                      <div className='flex flex-1 items-center justify-center sm:items-stretch sm:justify-start'>
                         <div className='flex flex-shrink-0 items-center'>
-                           {/* <img className='h-8 w-auto' src='./../images/logo-rest-1.png' alt='Restaurant' /> */}
-                           {/* <LogoImage /> */}
+                           <img className='h-8 w-auto' src={require('../images/logo-rest-1.png')} alt='Restaurant' />
                         </div>
                         <div className='hidden sm:ml-6 sm:block'>
                            <div className='flex space-x-4'>
