@@ -5,16 +5,16 @@ import { Fragment } from 'react';
 import { Disclosure, Menu, Transition } from '@headlessui/react';
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline';
 
-import LogoImage from './../images/logo-rest-1.png';
+import LogoImage from '../images/logo-rest-1.png';
 
 import styles from '../index.module.scss';
 
 const Header = () => {
    const navigation = [
-      { name: 'Main', href: '/', current: false },
-      { name: 'Shop Menu', href: '/shop', current: false },
-      { name: 'Shopping Cart', href: '/cart', current: false },
-      { name: 'Profile', href: '/profile', current: false }
+      { id: '001', name: 'Main', href: '/', current: false },
+      { id: '002', name: 'Shop Menu', href: '/shop', current: false },
+      { id: '003', name: 'Shopping Cart', href: '/cart', current: false },
+      { id: '004', name: 'Profile', href: '/profile', current: false }
    ];
 
    const classNames = (...classes) => {
@@ -42,14 +42,13 @@ const Header = () => {
                      <div className='flex flex-1 items-center justify-center sm:items-stretch sm:justify-start'>
                         <div className='flex flex-shrink-0 items-center'>
                            {/* <img className='h-8 w-auto' src='./../images/logo-rest-1.png' alt='Restaurant' /> */}
-                           <LogoImage />
+                           {/* <LogoImage /> */}
                         </div>
                         <div className='hidden sm:ml-6 sm:block'>
                            <div className='flex space-x-4'>
                               {navigation.map((item) => (
-                                 <li>
+                                 <li key={item.name}>
                                     <NavLink
-                                       key={item.name}
                                        to={item.href}
                                        className={classNames(
                                           item.current
@@ -149,7 +148,7 @@ const Header = () => {
                   <div className='space-y-1 px-2 pb-3 pt-2'>
                      {navigation.map((item) => (
                         <Disclosure.Button
-                           key={item.name}
+                           key={item.id}
                            as='a'
                            href={item.href}
                            className={classNames(
