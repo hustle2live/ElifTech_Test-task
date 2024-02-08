@@ -17,7 +17,8 @@ const ShoppingCart = () => {
       dispatch(setQuantity({ name: itemName, count: itemCount }));
    };
 
-   const [name, setName] = useState('');
+   const [firstName, setFirstName] = useState('');
+   const [lastName, setLastName] = useState('');
    const [email, setEmail] = useState('');
    const [phone, setPhone] = useState('');
    const [address, setAddress] = useState('');
@@ -25,7 +26,8 @@ const ShoppingCart = () => {
    const formHandleSubmit = (data) => {
       const userOrder = {
          client: {
-            Name: name,
+            Firstname: firstName,
+            Lastname: lastName,
             Email: email,
             Phone: phone,
             Address: address
@@ -42,19 +44,111 @@ const ShoppingCart = () => {
    }, [cartState, dispatch]);
 
    return (
-      <>
-         <h2 className={styles.cart_heading}>SHOPPING CART PAGE </h2>
-         <div className={styles.cart_wrapper}>
+      <div className='p-0'>
+         {/* <h2 className={styles.cart_heading}>SHOPPING CART PAGE </h2> */}
+
+         <div
+            className={`${styles.cart_wrapper} bg-gray-50 border-gray-900/10 m-32 mt-14 mb-14 pt-12 pb-12 border-2 rounded-md`}
+         >
             <div className={styles.cart_wrapper__userSection}>
-               <form>
-                  <label htmlFor='userName'>Name:</label>
-                  <input id='userName' type='text' value={name} onChange={(e) => setName(e.target.value)} />
-                  <label htmlFor='userEmail'>Email:</label>
-                  <input id='userEmail' type='email' value={email} onChange={(e) => setEmail(e.target.value)} />
-                  <label htmlFor='userPhone'>Phone:</label>
-                  <input id='userPhone' type='phone' value={phone} onChange={(e) => setPhone(e.target.value)} />
-                  <label htmlFor='userAddress'>Address:</label>
-                  <input id='userAddress' type='text' value={address} onChange={(e) => setAddress(e.target.value)} />
+               <h2 className='ml-12 text-lg font-semibold leading-7 text-gray-900'>Contact information</h2>
+               {/* <p className='ml-12 mt-1 text-sm leading-6 text-gray-600'>
+                  This information will be displayed publicly so be careful what you share.
+               </p> */}
+
+               <form className='ml-12 mt-0 mb-12 p-0'>
+                  <div className='mt-4'>
+                     <label className='block text-sm font-medium leading-6 text-gray-900' htmlFor='userEmail'>
+                        Email address:
+                     </label>
+
+                     <div className='mt-2'>
+                        <div className='flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 w-full'>
+                           <input
+                              id='userEmail'
+                              type='email'
+                              value={email}
+                              onChange={(e) => setEmail(e.target.value)}
+                              className='block flex-1 border-0 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6'
+                           />
+                        </div>
+                     </div>
+                  </div>
+
+                  {/* <div className='divide-y divide-gray-400'></div> */}
+
+                  <div className='mt-12 pt-12 flex gap-4 w-full border-t-2'>
+                     <div className='w-full'>
+                        <label className='block text-sm font-medium leading-6 text-gray-900' htmlFor='userName'>
+                           First name:
+                        </label>
+
+                        <div className='mt-2'>
+                           <div className='flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600'>
+                              <input
+                                 id='userFirstName'
+                                 type='text'
+                                 value={firstName}
+                                 onChange={(e) => setFirstName(e.target.value)}
+                                 className='block flex-1 border-0 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6'
+                              />
+                           </div>
+                        </div>
+                     </div>
+                     <div className='w-full'>
+                        <label className='block text-sm font-medium leading-6 text-gray-900' htmlFor='userName'>
+                           Last name:
+                        </label>
+
+                        <div className='mt-2'>
+                           <div className='flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600'>
+                              <input
+                                 id='userLastName'
+                                 type='text'
+                                 value={lastName}
+                                 onChange={(e) => setLastName(e.target.value)}
+                                 className='block flex-1 border-0 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6'
+                              />
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div className='mt-12'>
+                     <label className='block text-sm font-medium leading-6 text-gray-900' htmlFor='userPhone'>
+                        Phone:
+                     </label>
+
+                     <div className='mt-2'>
+                        <div className='flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 w-full'>
+                           <input
+                              id='userPhone'
+                              type='phone'
+                              value={phone}
+                              onChange={(e) => setPhone(e.target.value)}
+                              className='block flex-1 border-0 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6'
+                           />
+                        </div>
+                     </div>
+                  </div>
+
+                  <div className='mt-12'>
+                     <label className='block text-sm font-medium leading-6 text-gray-900' htmlFor='userAddress'>
+                        Address:
+                     </label>
+
+                     <div className='mt-2'>
+                        <div className='flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 w-full'>
+                           <input
+                              id='userAddress'
+                              type='text'
+                              value={address}
+                              onChange={(e) => setAddress(e.target.value)}
+                              className='block flex-1 border-0 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6'
+                           />
+                        </div>
+                     </div>
+                  </div>
                </form>
             </div>
             <div className={styles.cart_wrapper__cartSection}>
@@ -105,7 +199,7 @@ const ShoppingCart = () => {
                <input type='submit' value='Submit' onClick={formHandleSubmit} />
             </div>
          </div>
-      </>
+      </div>
    );
 };
 
