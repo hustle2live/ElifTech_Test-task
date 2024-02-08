@@ -39,7 +39,7 @@ const ShoppingCart = () => {
 
    useEffect(() => {
       dispatch(getTotalPrice());
-   }, [cartState]);
+   }, [cartState, dispatch]);
 
    return (
       <>
@@ -59,14 +59,17 @@ const ShoppingCart = () => {
             </div>
             <div className={styles.cart_wrapper__cartSection}>
                {cartState.map(({ NAME, PRICE, IMG_SRC, QUANTITY }) => {
-                  const MenuImage = IMG_SRC ? require(`./${IMG_SRC}`) : Plate;
+                  const MenuImage = IMG_SRC ? require(`../${IMG_SRC}`) : Plate;
+
                   const itemPrice = Math.round(PRICE * QUANTITY * 100) / 100;
 
                   return (
                      <div className={styles.shopMenu__item} key={NAME}>
                         <img className={styles.shopMenu__item_image} src={MenuImage} alt={NAME} />
+
                         <div className={styles.shopMenu__item_frame}>
                            <h4 className={styles.shopMenu__item_name}>{NAME}</h4>
+
                            <div className={styles.shopMenu__item_price}>
                               <p>
                                  Price: <span>${PRICE}</span>

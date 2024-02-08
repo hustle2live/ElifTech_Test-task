@@ -82,42 +82,42 @@
         {
             "NAME": "French Fries with Ketchup",
             "PRICE": "2.23",
-            "IMG_SRC": "plate__french-fries.png"
+            "IMG_SRC": "images/plate__french-fries.png"
         },
         {
             "NAME": "Salmon and Vegetables",
             "PRICE": "5.12",
-            "IMG_SRC": "plate__salmon-vegetables.png"
+            "IMG_SRC": "images/plate__salmon-vegetables.png"
         },
         {
             "NAME": "Spaghetti with Sauce",
             "PRICE": "7.82",
-            "IMG_SRC": "plate__spaghetti-meat-sauce.png"
+            "IMG_SRC": "images/plate__spaghetti-meat-sauce.png"
         },
         {
             "NAME": "Breakfast with eggs and bacon",
             "PRICE": "4.50",
-            "IMG_SRC": "plate__bacon-eggs.png"
+            "IMG_SRC": "images/plate__bacon-eggs.png"
         },
         {
             "NAME": "Fish sticks fries",
             "PRICE": "8.24",
-            "IMG_SRC": "plate__fish-sticks-fries.png"
+            "IMG_SRC": "images/plate__fish-sticks-fries.png"
         },
         {
             "NAME": "Chicken salad menu",
             "PRICE": "4.65",
-            "IMG_SRC": "plate__chicken-salad.png"
+            "IMG_SRC": "images/plate__chicken-salad.png"
         },
         {
             "NAME": "Tortellini",
             "PRICE": "3.95",
-            "IMG_SRC": "plate__tortellini.png"
+            "IMG_SRC": "images/plate__tortellini.png"
         },
         {
             "NAME": "Ravioli menu",
             "PRICE": "3.20",
-            "IMG_SRC": "plate__ravioli.png"
+            "IMG_SRC": "images/plate__ravioli.png"
         }
     ],
     "Hesburger": [

@@ -9,8 +9,6 @@ import Plate from '../images/plate.png';
 import { dishAdded, dishRemoved } from '../redux/cartReducer';
 
 const MenuPage = () => {
-   // const shopMenu = data;
-
    const shopNames = Object.keys(shopMenu);
 
    const [activeShop, setActiveShop] = useState(shopNames[0]);
@@ -38,18 +36,23 @@ const MenuPage = () => {
          </section>
          <section className={styles.shopMenu}>
             {shopMenu[activeShop].map(({ NAME, PRICE, IMG_SRC }) => {
-               const MenuImage = IMG_SRC ? require(`../images/${IMG_SRC}`) : Plate;
+               const MenuImage = IMG_SRC ? require(`../${IMG_SRC}`) : Plate;
 
                return (
                   <div className={styles.shopMenu__item} key={NAME}>
                      <img className={styles.shopMenu__item_image} src={MenuImage} alt={NAME} />
+
                      <div className={styles.shopMenu__item_frame}>
                         <h4 className={styles.shopMenu__item_name}>{NAME}</h4>
+
                         <p className={styles.shopMenu__item_price}>{PRICE}</p>
+
                         {!cartState.find((item) => item.NAME === NAME) ? (
                            <button
                               className={styles.shopMenu__item_button}
-                              onClick={(e) => dispatch(dishAdded({ NAME, PRICE, IMG_SRC: `../images/${IMG_SRC}` }))}
+                              onClick={(e) =>
+                                 dispatch(dishAdded({ NAME, PRICE, IMG_SRC: IMG_SRC ? `${IMG_SRC}` : null }))
+                              }
                            >
                               Add to Cart
                            </button>
