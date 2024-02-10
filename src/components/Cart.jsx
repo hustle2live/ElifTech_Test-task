@@ -156,11 +156,11 @@ const ShoppingCart = () => {
                <h2 className='ml-4 mb-4 text-lg font-semibold leading-7 text-gray-900'>Order summary:</h2>
 
                <div className='bg-white p-8 border-gray-300 border'>
-                  <div ul role='list' className='-my-6 divide-y divide-gray-200'>
+                  <ul className='-my-6 divide-y divide-gray-200'>
                      {cartState.map(({ NAME, PRICE, IMG_SRC, QUANTITY }) => {
                         const MenuImage = IMG_SRC ? require(`../${IMG_SRC}`) : Plate;
 
-                        const itemPrice = Math.round(PRICE * QUANTITY * 100) / 100;
+                        const itemPrice = (Math.round(PRICE * QUANTITY * 100) / 100).toFixed(2);
 
                         return (
                            <li className='flex py-6' key={NAME}>
@@ -187,7 +187,7 @@ const ShoppingCart = () => {
                                        min={0}
                                        max={10}
                                        value={QUANTITY}
-                                       className="border-gray-300 border-2 rounded-md pl-2"
+                                       className='border-gray-300 border-2 rounded-md pl-2'
                                        onChange={(e) => handleCountChange(NAME, e.target.value)}
                                     />
 
@@ -231,7 +231,7 @@ const ShoppingCart = () => {
                            </li>
                         );
                      })}
-                  </div>
+                  </ul>
                </div>
             </div>
             <div className={styles.cart_wrapper__totalSection}>
