@@ -202,18 +202,6 @@ const ShoppingCart = () => {
                                     </div>
                                  </div>
                               </div>
-
-                              {/* <div className={styles.shopMenu__item_frame}>
-                                 <h4 className={styles.shopMenu__item_name}>{NAME}</h4>
-                                 <div className={styles.shopMenu__item_price}>
-                                    <p>
-                                       Price: <span>${PRICE}</span>
-                                       <span className={styles.shopMenu__item_price_total}>
-                                          Total: <span>${itemPrice}</span>
-                                       </span>
-                                    </p>
-                                 </div>
-                              </div> */}
                            </li>
                         );
                      })}
