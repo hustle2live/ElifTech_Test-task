@@ -48,7 +48,7 @@ const ShoppingCart = () => {
          {/* <h2 className={styles.cart_heading}>SHOPPING CART PAGE </h2> */}
 
          <div
-            className={`${styles.cart_wrapper} bg-gray-50 border-gray-900/10 m-32 mt-14 mb-14 pt-12 pb-12 border-2 rounded-md`}
+            className={`${styles.cart_wrapper} bg-gray-50 border-gray-900/10 m-0 sm:m-8 md:m-14 lg:mx-32 pt-12 pb-12 border-2 rounded-md`}
          >
             <div className={styles.cart_wrapper__userSection}>
                <h2 className='ml-12 text-lg font-semibold leading-7 text-gray-900'>Contact information</h2>
@@ -63,13 +63,13 @@ const ShoppingCart = () => {
                      </label>
 
                      <div className='mt-2'>
-                        <div className='flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 w-full'>
+                        <div className='flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 w-full bg-white '>
                            <input
                               id='userEmail'
                               type='email'
                               value={email}
                               onChange={(e) => setEmail(e.target.value)}
-                              className='block flex-1 border-0 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6'
+                              className='block flex-1 rounded-md border border-slate-300 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6 focus:outline-0'
                            />
                         </div>
                      </div>
@@ -77,37 +77,38 @@ const ShoppingCart = () => {
 
                   {/* <div className='divide-y divide-gray-400'></div> */}
 
-                  <div className='mt-12 pt-12 flex gap-4 w-full border-t-2'>
-                     <div className='w-full'>
+                  <div className='mt-12 pt-12 flex gap-4 w-full border-t-2 flex-wrap lg:flex-nowrap'>
+                     <div className='w-full lg:w-1/2'>
                         <label className='block text-sm font-medium leading-6 text-gray-900' htmlFor='userName'>
                            First name:
                         </label>
 
                         <div className='mt-2'>
-                           <div className='flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600'>
+                           <div className='flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 bg-white'>
                               <input
                                  id='userFirstName'
                                  type='text'
+                                 required
                                  value={firstName}
                                  onChange={(e) => setFirstName(e.target.value)}
-                                 className='block flex-1 border-0 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6'
+                                 className='block flex-1 rounded-md border border-slate-300 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6 focus:outline-0'
                               />
                            </div>
                         </div>
                      </div>
-                     <div className='w-full'>
+                     <div className='w-full lg:w-1/2'>
                         <label className='block text-sm font-medium leading-6 text-gray-900' htmlFor='userName'>
                            Last name:
                         </label>
 
                         <div className='mt-2'>
-                           <div className='flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600'>
+                           <div className='flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 bg-white'>
                               <input
                                  id='userLastName'
                                  type='text'
                                  value={lastName}
                                  onChange={(e) => setLastName(e.target.value)}
-                                 className='block flex-1 border-0 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6'
+                                 className='block flex-1 rounded-md border border-slate-300 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6 focus:outline-0'
                               />
                            </div>
                         </div>
@@ -120,13 +121,13 @@ const ShoppingCart = () => {
                      </label>
 
                      <div className='mt-2'>
-                        <div className='flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 w-full'>
+                        <div className='flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 w-full bg-white'>
                            <input
                               id='userPhone'
                               type='phone'
                               value={phone}
                               onChange={(e) => setPhone(e.target.value)}
-                              className='block flex-1 border-0 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6'
+                              className='block flex-1 rounded-md border border-slate-300 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6 focus:outline-0'
                            />
                         </div>
                      </div>
@@ -138,13 +139,13 @@ const ShoppingCart = () => {
                      </label>
 
                      <div className='mt-2'>
-                        <div className='flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 w-full'>
+                        <div className='flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 w-full bg-white '>
                            <input
                               id='userAddress'
                               type='text'
                               value={address}
                               onChange={(e) => setAddress(e.target.value)}
-                              className='block flex-1 border-0 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6'
+                              className='block flex-1 rounded-md border border-slate-300 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6 focus:outline-0'
                            />
                         </div>
                      </div>
