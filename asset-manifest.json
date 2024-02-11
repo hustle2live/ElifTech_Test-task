@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/eliftech-test/static/css/main.db2104f7.css",
-    "main.js": "/eliftech-test/static/js/main.6b2e745f.js",
+    "main.css": "/eliftech-test/static/css/main.77b0d533.css",
+    "main.js": "/eliftech-test/static/js/main.5f73ef44.js",
     "static/js/787.4595100f.chunk.js": "/eliftech-test/static/js/787.4595100f.chunk.js",
     "static/media/plate__chicken-salad.png": "/eliftech-test/static/media/plate__chicken-salad.79e3dd16e66cd1b26a05.png",
     "static/media/plate__salmon-vegetables.png": "/eliftech-test/static/media/plate__salmon-vegetables.ae879edfef92f9068c8b.png",
@@ -11,6 +11,7 @@
     "static/media/plate__fish-sticks-fries.png": "/eliftech-test/static/media/plate__fish-sticks-fries.1007fbc8626870c43ed8.png",
     "static/media/plate__tortellini.png": "/eliftech-test/static/media/plate__tortellini.fab665ef9efe46e8e9b6.png",
     "static/media/plate__ravioli.png": "/eliftech-test/static/media/plate__ravioli.b59b03fe60ba411bd4c9.png",
+    "static/media/logo-rest-1.png": "/eliftech-test/static/media/logo-rest-1.6451aea0657f89450ffe.png",
     "static/media/plate.png": "/eliftech-test/static/media/plate.1b6e9fccf99e3c51a870.png",
     "static/media/bg__left.svg": "/eliftech-test/static/media/bg__left.a6aaa2bf28de8bf39c55.svg",
     "static/media/bg__btm-right.svg": "/eliftech-test/static/media/bg__btm-right.6da4d2be6511b0d183fc.svg",
@@ -18,12 +19,12 @@
     "index.html": "/eliftech-test/index.html",
     "static/media/chevron.svg": "/eliftech-test/static/media/chevron.f09ad78c70c23903872b.svg",
     "static/media/check.svg": "/eliftech-test/static/media/check.808cd56442374a9032e7.svg",
-    "main.db2104f7.css.map": "/eliftech-test/static/css/main.db2104f7.css.map",
-    "main.6b2e745f.js.map": "/eliftech-test/static/js/main.6b2e745f.js.map",
+    "main.77b0d533.css.map": "/eliftech-test/static/css/main.77b0d533.css.map",
+    "main.5f73ef44.js.map": "/eliftech-test/static/js/main.5f73ef44.js.map",
     "787.4595100f.chunk.js.map": "/eliftech-test/static/js/787.4595100f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.db2104f7.css",
-    "static/js/main.6b2e745f.js"
+    "static/css/main.77b0d533.css",
+    "static/js/main.5f73ef44.js"
   ]
 }
