@@ -8,6 +8,8 @@ body {
    -moz-osx-font-smoothing: grayscale;
 }
 
+/* Handle on hover */
+
 .header {
    display: flex;
    align-items: center;
@@ -15,23 +17,7 @@ body {
    max-height: 100px;
    height: 100px;
    box-sizing: border-box;
-
-   // &__navmenu {
-   //    display: flex;
-   // }
-
-   // li {
-   //    list-style-type: none;
-   // }
-
-   // &__navLink {
-   //    padding: 5px;
-   //    margin: auto 10px;
-   // }
 }
-
-// .currentShopContent {
-// }
 
 .wrapper {
    display: flex;
@@ -216,9 +202,21 @@ body {
 }
 
 .cart_wrapper {
-   display: flex;
-   flex-wrap: wrap;
-   min-height: calc(100vh - 100px);
+   ::-webkit-scrollbar {
+      width: 4px;
+   }
+
+   /* Track */
+   ::-webkit-scrollbar-track {
+      // background: #f1f1f1;
+      background: #ffffff;
+   }
+
+   /* Handle */
+   ::-webkit-scrollbar-thumb {
+      background: orange;
+      border-radius: 5px;
+   }
 
    &__cartSection {
       &_inputCount {
