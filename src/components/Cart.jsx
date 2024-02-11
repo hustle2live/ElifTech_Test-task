@@ -79,7 +79,7 @@ const ShoppingCart = () => {
 
                   <div className='mt-12 pt-12 flex gap-4 w-full border-t-2 flex-wrap lg:flex-nowrap'>
                      <div className='w-full lg:w-1/2'>
-                        <label className='block text-sm font-medium leading-6 text-gray-900' htmlFor='userName'>
+                        <label className='block text-sm font-medium leading-6 text-gray-900' htmlFor='userFirstName'>
                            First name:
                         </label>
 
@@ -97,7 +97,7 @@ const ShoppingCart = () => {
                         </div>
                      </div>
                      <div className='w-full lg:w-1/2'>
-                        <label className='block text-sm font-medium leading-6 text-gray-900' htmlFor='userName'>
+                        <label className='block text-sm font-medium leading-6 text-gray-900' htmlFor='userLastName'>
                            Last name:
                         </label>
 
@@ -153,10 +153,10 @@ const ShoppingCart = () => {
                </form>
             </div>
             <div className=''>
-               <h2 className='ml-4 mb-4 text-lg font-semibold leading-7 text-gray-900'>Order summary:</h2>
+               <h2 className='ml-10 mb-6 text-lg font-semibold leading-7 text-gray-900'>Order summary:</h2>
 
-               <div className='bg-white p-8 border-gray-300 border'>
-                  <ul className='-my-6 divide-y divide-gray-200'>
+               <div className='ml-10 bg-white p-8 border-gray-200 border rounded-md min-w-80 min-h-24'>
+                  <ul className='-my-6 divide-y divide-gray-200 min-w-full'>
                      {cartState.map(({ NAME, PRICE, IMG_SRC, QUANTITY }) => {
                         const MenuImage = IMG_SRC ? require(`../${IMG_SRC}`) : Plate;
 
