@@ -16,7 +16,7 @@ const MenuPage = () => {
    const cartState = useSelector((store) => store.cart);
 
    return (
-      <div className='flex'>
+      <div className='flex mt-10'>
          <section className='h-full w-1/3'>
             <h3 className='mx-auto mt-6 mb-4 w-1/2 pl-4 font-semibold'>Select shop:</h3>
 
@@ -49,41 +49,43 @@ const MenuPage = () => {
                </ul>
             </nav>
          </section>
-         <section className={`${styles.shopMenu} flex flex-wrap w-2/3 h-svh overflow-y-scroll`}>
-            {shopMenu[activeShop].map(({ NAME, PRICE, IMG_SRC }) => {
-               const MenuImage = IMG_SRC ? require(`../${IMG_SRC}`) : Plate;
+         <section className={`${styles.shopMenu} w-2/3 h-svh`}>
+            <ul className={`${styles.shopMenu} flex flex-wrap overflow-y-scroll`}>
+               {shopMenu[activeShop].map(({ NAME, PRICE, IMG_SRC }) => {
+                  const MenuImage = IMG_SRC ? require(`../${IMG_SRC}`) : Plate;
 
-               return (
-                  <div className='flex flex-col' key={NAME}>
-                     <img className={styles.shopMenu__item_image} src={MenuImage} alt={NAME} />
+                  return (
+                     <li className='relative flex flex-col w-72 border border-slate-300 overflow-hidden' key={NAME}>
+                        <img className={`${styles.shopMenu__item_image} -mt-4 -ml-4`} src={MenuImage} alt={NAME} />
 
-                     <div className={styles.shopMenu__item_frame}>
-                        <h4 className={styles.shopMenu__item_name}>{NAME}</h4>
+                        <div className={styles.shopMenu__item_frame}>
+                           <h4 className={styles.shopMenu__item_name}>{NAME}</h4>
 
-                        <p className={styles.shopMenu__item_price}>{PRICE}</p>
+                           <p className={styles.shopMenu__item_price}>{PRICE}</p>
 
-                        {!cartState.find((item) => item.NAME === NAME) ? (
-                           <button
-                              className={styles.shopMenu__item_button}
-                              onClick={(e) =>
-                                 dispatch(dishAdded({ NAME, PRICE, IMG_SRC: IMG_SRC ? `${IMG_SRC}` : null }))
-                              }
-                           >
-                              Add to Cart
-                           </button>
-                        ) : (
-                           <button
-                              className={`${styles.shopMenu__item_button} ${styles.delete}`}
-                              onClick={(e) => dispatch(dishRemoved(NAME))}
-                           >
-                              Delete
-                              <span className='material-symbols-outlined'>done</span>
-                           </button>
-                        )}
-                     </div>
-                  </div>
-               );
-            })}
+                           {!cartState.find((item) => item.NAME === NAME) ? (
+                              <button
+                                 className={styles.shopMenu__item_button}
+                                 onClick={(e) =>
+                                    dispatch(dishAdded({ NAME, PRICE, IMG_SRC: IMG_SRC ? `${IMG_SRC}` : null }))
+                                 }
+                              >
+                                 Add to Cart
+                              </button>
+                           ) : (
+                              <button
+                                 className={`${styles.shopMenu__item_button} ${styles.delete}`}
+                                 onClick={(e) => dispatch(dishRemoved(NAME))}
+                              >
+                                 Delete
+                                 <span className='material-symbols-outlined'>done</span>
+                              </button>
+                           )}
+                        </div>
+                     </li>
+                  );
+               })}
+            </ul>
          </section>
       </div>
    );
