@@ -98,7 +98,11 @@ const MenuPage = () => {
                            className='relative flex flex-col w-72 bg-white border border-slate-200 overflow-hidden hover:border-slate-400 hover:scale-105 hover:z-10 hover:shadow-xl'
                            key={NAME}
                         >
-                           <img className={`${styles.shopMenu__item_image} -mt-4 -ml-4`} src={MenuImage} alt={NAME} />
+                           <img
+                              className='block box-border -mt-4 -ml-4 rounded-full w-32 h-32 shadow-md'
+                              src={MenuImage}
+                              alt={NAME}
+                           />
 
                            <div className={styles.shopMenu__item_frame}>
                               <h4 className={styles.shopMenu__item_name}>{NAME}</h4>
