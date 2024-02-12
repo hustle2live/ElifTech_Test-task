@@ -8,8 +8,6 @@ import ShoppingCart from './components/Cart';
 import './App.css';
 
 const App = () => {
-   // let url = useLocation();
-
    return (
       <>
          <Header />

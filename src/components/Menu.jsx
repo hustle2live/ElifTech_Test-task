@@ -8,8 +8,6 @@ import Plate from '../images/plate.png';
 
 import { dishAdded, dishRemoved } from '../redux/cartReducer';
 
-// import { Alert, initTE } from '@tailwind/elements'; npm install tw-elements
-
 import { TrashIcon } from '@heroicons/react/24/outline';
 import { CheckBadgeIcon } from '@heroicons/react/20/solid';
 

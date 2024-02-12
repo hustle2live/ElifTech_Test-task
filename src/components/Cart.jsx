@@ -3,6 +3,8 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import { dishRemoved, setQuantity, getTotalPrice, orderRegister } from '../redux/cartReducer';
 
+import { MinusSmallIcon, MinusCircleIcon, PlusCircleIcon } from '@heroicons/react/24/outline';
+import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/20/solid';
 
 import Plate from '../images/plate.png';
 import styles from '../index.module.scss';
@@ -67,8 +69,6 @@ const ShoppingCart = () => {
                         </div>
                      </div>
                   </div>
-
-                  {/* <div className='divide-y divide-gray-400'></div> */}
 
                   <div className='mt-12 pt-12 flex gap-4 w-full border-t-2 flex-wrap lg:flex-nowrap'>
                      <div className='w-full lg:w-1/2'>
@@ -145,7 +145,7 @@ const ShoppingCart = () => {
                   </div>
                </form>
             </div>
-            <div className='w-full pl-12 lg:pl-0 lg:w-1/2 2xl:w-1/3 block'>
+            <div className='w-full pl-12 lg:pl-0 lg:w-1/2 2xl:max-w-lg block'>
                <h2 className='mb-6 text-lg font-semibold leading-7 text-gray-900'>Order summary:</h2>
 
                <ul className='bg-white p-8 pr-14 min-h-24 max-h-96 overflow-y-scroll divide-y divide-gray-200 min-w-full'>
@@ -174,14 +174,24 @@ const ShoppingCart = () => {
                               <div className='flex flex-1 items-end justify-between text-sm'>
                                  <p className='text-gray-500'>Quantity: </p>
 
-                                 <input
-                                    value={QUANTITY}
-                                    type='number'
-                                    min={0}
-                                    max={10}
-                                    className='border-gray-300 border-2 rounded-md pl-2'
-                                    onChange={(e) => handleCountChange(NAME, e.target.value)}
-                                 />
+                                 <div className='flex border-2 rounded-md gap-0 -ml-2 mr-2'>
+                                    <input
+                                       id='quantity'
+                                       value={QUANTITY}
+                                       type='number'
+                                       min={0}
+                                       max={10}
+                                       className='border-gray-300 border-0 rounded-md pl-4 w-12 ml-auto mr-0'
+                                       onChange={(e) => handleCountChange(NAME, e.target.value)}
+                                    />
+
+                                    <button className='m-0' onClick={(e) => handleCountChange(NAME, QUANTITY - 1)}>
+                                       <ChevronLeftIcon className='w-6 h-6 m-0 bg-gray-50 hover:bg-gray-100 hover:text-orange-600 active:bg-gray-200 border text-slate-400' />
+                                    </button>
+                                    <button className='m-0' onClick={(e) => handleCountChange(NAME, QUANTITY + 1)}>
+                                       <ChevronRightIcon className='w-6 h-6 m-0 bg-gray-50 hover:bg-gray-100 hover:text-orange-600 active:bg-gray-200 border text-slate-400' />
+                                    </button>
+                                 </div>
 
                                  <div className='flex'>
                                     <button
