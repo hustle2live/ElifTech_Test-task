@@ -64,25 +64,25 @@
         },
         {
             "PRICE": "13.6",
-            "NAME": "Premium McWrap Chicken & Bacon ",
+            "NAME": "Premium McWrap Chicken & Bacon",
             "DESCRIPTION": "(Buttermilk Crispy) 11.1 oz (314 g)",
             "IMG_SRC": ""
         },
         {
             "PRICE": "14.1",
-            "NAME": "Premium McWrap Chicken & Bacon ",
+            "NAME": "Premium McWrap Chicken & Bacon**",
             "DESCRIPTION": "(Grilled) 11 oz (312 g)",
             "IMG_SRC": ""
         },
         {
             "PRICE": "13.1",
-            "NAME": "Premium McWrap Chicken & Ranch ",
+            "NAME": "Premium McWrap Chicken & Ranch",
             "DESCRIPTION": "(Buttermilk Crispy) 10.9 oz (309 g)",
             "IMG_SRC": ""
         },
         {
             "PRICE": "13.5",
-            "NAME": "Premium McWrap Chicken & Ranch ",
+            "NAME": "Premium McWrap Chicken & Ranch**",
             "DESCRIPTION": "(Grilled) 10.8 oz (306 g)",
             "IMG_SRC": ""
         },
@@ -146,7 +146,7 @@
     "Hesburger": [
         {
             "PRICE": "3.1",
-            "NAME": "Premium McWrap Chicken Sweet Chili ",
+            "NAME": "Premium McWrap Chicken Sweet Chili**",
             "DESCRIPTION": "(Grilled) 10.4 oz (294 g)",
             "IMG_SRC": ""
         },
