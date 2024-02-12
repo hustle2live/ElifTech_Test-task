@@ -22,12 +22,11 @@ const MenuPage = () => {
    const WarningAlert = ({ deletedItem }) => {
       return (
          <div className='fixed bg-gray-500 bg-opacity-80 p-24 block min-w-full min-h-full z-20 overflow-hidden'>
-            <div className='flex gap-4 align-center justify-center absolute top-1/2 left-1/3 shadow-lg min-w-vw mb-4 rounded-lg bg-orange-100 px-6 py-5 text-base'>
+            <div className='flex -translate-x-1/2 -translate-y-1/2 gap-4 align-center justify-center absolute top-1/2 left-1/2 shadow-lg min-w-vw mb-4 rounded-lg bg-orange-100 px-6 py-5 text-base'>
                <p className='block text-red-800 my-auto mr-6'>Are You Sure to remove this Item?</p>
 
                <button
-                  className='rounded-lg bg-orange-300 my-auto px-3.5 py-2.5 text-sm font-semibold 
-               text-black shadow-sm hover:bg-orange-400 hover:text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600'
+                  className='rounded-lg bg-orange-300 my-auto px-3.5 py-2.5 text-sm font-semibold text-black shadow-sm hover:bg-orange-400 hover:text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600'
                   onClick={() => {
                      dispatch(dishRemoved(deletedItem));
                      setConfirm(false);
@@ -37,9 +36,7 @@ const MenuPage = () => {
                </button>
 
                <button
-                  className='
-               rounded-lg bg-transparent my-auto px-3.5 py-2.5 text-sm font-semibold 
-               text-black shadow-sm hover:bg-gray-400 hover:text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600'
+                  className='rounded-lg bg-transparent my-auto px-3.5 py-2.5 text-sm font-semibold text-black shadow-sm hover:bg-gray-400 hover:text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600'
                   onClick={() => {
                      setConfirm(false);
                   }}
@@ -59,8 +56,6 @@ const MenuPage = () => {
       <>
          {confirm && <WarningAlert deletedItem={item} />}
          <div className='flex mt-10'>
-            {/* {confirm ? <WarningAlert /> : null} */}
-
             <section className='h-full w-1/4'>
                <h3 className='mx-auto mt-6 mb-4 w-1/2 pl-4 font-semibold'>Select shop:</h3>
 
@@ -112,8 +107,7 @@ const MenuPage = () => {
 
                               {!cartState.find((item) => item.NAME === NAME) ? (
                                  <button
-                                    // className={styles.shopMenu__item_button}
-                                    className='relative m-auto mr-0 mb-2 z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium text-sky-600 hover:bg-gray-100 border hover:shadow-md'
+                                    className='relative m-auto mr-0 mb-2 z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium hover:bg-gray-100 border hover:shadow-md'
                                     onClick={(e) =>
                                        dispatch(dishAdded({ NAME, PRICE, IMG_SRC: IMG_SRC ? `${IMG_SRC}` : null }))
                                     }
@@ -127,8 +121,6 @@ const MenuPage = () => {
                                        setItem(NAME);
                                        setConfirm(true);
                                     }}
-                                    // onClick={() => (window.confirm('message?') ?
-                                    // dispatch(dishRemoved(NAME)) : null)}
                                  >
                                     Remove
                                     <TrashIcon className='inline h-4 w-4 ml-1 -mt-1' aria-hidden='true' />
