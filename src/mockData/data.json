@@ -4,7 +4,7 @@
             "PRICE": "3.44",
             "NAME": "Bacon Clubhouse Burger ",
             "DESCRIPTION": "9.7 oz (274 g)",
-            "IMG_SRC": ""
+            "IMG_SRC": "images/plate__french-fries.png"
         },
         {
             "PRICE": "4.5",
@@ -16,25 +16,25 @@
             "PRICE": "4.0",
             "NAME": "Premium Buttermilk Crispy Chicken ",
             "DESCRIPTION": "Bacon Clubhouse Sandwich 10.1 oz (287 g)",
-            "IMG_SRC": ""
+            "IMG_SRC": "images/plate__spaghetti-meat-sauce.png"
         },
         {
             "PRICE": "1.4",
             "NAME": "McChicken ",
             "DESCRIPTION": "5.1 oz (144 g)",
-            "IMG_SRC": ""
+            "IMG_SRC": "images/plate__french-fries.png"
         },
         {
             "PRICE": "1.4",
             "NAME": "Buffalo Ranch McChicken ",
             "DESCRIPTION": "5.2 oz (148 g)",
-            "IMG_SRC": ""
+            "IMG_SRC": "images/plate__salmon-vegetables.png"
         },
         {
             "PRICE": "2.0",
             "NAME": "Bacon Buffalo Ranch McChicken ",
             "DESCRIPTION": "5.7 oz (162 g)",
-            "IMG_SRC": ""
+            "IMG_SRC": "images/plate__bacon-eggs.png"
         },
         {
             "PRICE": "2.2",
@@ -54,7 +54,7 @@
             "PRICE": "15",
             "NAME": "Filet-O-Fish 5 oz (142 g)",
             "DESCRIPTION": "",
-            "IMG_SRC": ""
+            "IMG_SRC": "images/plate__bacon-eggs.png"
         },
         {
             "PRICE": "12.2",
@@ -66,13 +66,13 @@
             "PRICE": "13.6",
             "NAME": "Premium McWrap Chicken & Bacon",
             "DESCRIPTION": "(Buttermilk Crispy) 11.1 oz (314 g)",
-            "IMG_SRC": ""
+            "IMG_SRC": "images/plate__fish-sticks-fries.png"
         },
         {
             "PRICE": "14.1",
             "NAME": "Premium McWrap Chicken & Bacon**",
             "DESCRIPTION": "(Grilled) 11 oz (312 g)",
-            "IMG_SRC": ""
+            "IMG_SRC": "images/plate__salmon-vegetables.png"
         },
         {
             "PRICE": "13.1",
@@ -84,13 +84,13 @@
             "PRICE": "13.5",
             "NAME": "Premium McWrap Chicken & Ranch**",
             "DESCRIPTION": "(Grilled) 10.8 oz (306 g)",
-            "IMG_SRC": ""
+            "IMG_SRC": "images/plate__tortellini.png"
         },
         {
             "PRICE": "12.7",
             "NAME": "Premium McWrap Chicken Sweet Chili ",
             "DESCRIPTION": "(Buttermilk Crispy) 10.6 oz (301 g)",
-            "IMG_SRC": ""
+            "IMG_SRC": "images/plate__ravioli.png"
         }
     ],
     "HomeCafe": [
@@ -148,7 +148,7 @@
             "PRICE": "3.1",
             "NAME": "Premium McWrap Chicken Sweet Chili**",
             "DESCRIPTION": "(Grilled) 10.4 oz (294 g)",
-            "IMG_SRC": ""
+            "IMG_SRC": "images/plate__spaghetti-meat-sauce.png"
         },
         {
             "PRICE": "2.5",
@@ -160,25 +160,25 @@
             "PRICE": "3.1",
             "NAME": "Quarter Pounder",
             "DESCRIPTION": "with Cheese 7.3 oz (206 g)",
-            "IMG_SRC": ""
+            "IMG_SRC": "images/plate__bacon-eggs.png"
         },
         {
             "PRICE": "5.0",
             "NAME": "Double Quarter Pounder with Cheese ",
             "DESCRIPTION": "10.3 oz (291 g)",
-            "IMG_SRC": ""
+            "IMG_SRC": "images/plate__fish-sticks-fries.png"
         },
         {
             "PRICE": "12",
             "NAME": "Hamburger ",
             "DESCRIPTION": "3.5 oz (99 g)",
-            "IMG_SRC": ""
+            "IMG_SRC": "images/plate__chicken-salad.png"
         },
         {
             "PRICE": "1.5",
             "NAME": "Cheeseburger ",
             "DESCRIPTION": "4 oz (113 g)",
-            "IMG_SRC": ""
+            "IMG_SRC": "images/plate__tortellini.png"
         },
         {
             "PRICE": "1.5",
@@ -190,7 +190,7 @@
             "PRICE": "1.5",
             "NAME": "Grilled Onion Cheddar",
             "DESCRIPTION": "4 oz (114 g)",
-            "IMG_SRC": ""
+            "IMG_SRC": "images/plate__ravioli.png"
         },
         {
             "PRICE": "2.5",
@@ -202,7 +202,7 @@
             "PRICE": "2.2",
             "NAME": "McDouble",
             "DESCRIPTION": " 5.2 oz (148 g)",
-            "IMG_SRC": ""
+            "IMG_SRC": "images/plate__chicken-salad.png"
         },
         {
             "PRICE": "2.8",
@@ -214,13 +214,13 @@
             "PRICE": "2.2",
             "NAME": "Daily Double",
             "DESCRIPTION": "6.8 oz (191 g)",
-            "IMG_SRC": ""
+            "IMG_SRC": "images/plate__tortellini.png"
         },
         {
             "PRICE": "1.6",
             "NAME": "Ranch Snack Wrap",
             "DESCRIPTION": "Buttermilk Crispy 4.6 oz (129 g)",
-            "IMG_SRC": ""
+            "IMG_SRC": "images/plate__ravioli.png"
         }
     ]
 }
