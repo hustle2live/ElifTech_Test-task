@@ -7,10 +7,10 @@ import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline';
 
 const Header = () => {
    const navigation = [
-      { id: '001', name: 'Main', href: '/', current: false },
-      { id: '002', name: 'Shop Menu', href: '/shop', current: false },
-      { id: '003', name: 'Shopping Cart', href: '/cart', current: false },
-      { id: '004', name: 'Profile', href: '/profile', current: false }
+      { id: '001', name: 'Main', href: '/eliftech-test/main', current: false },
+      { id: '002', name: 'Shop Menu', href: '/eliftech-test/shop', current: false },
+      { id: '003', name: 'Shopping Cart', href: '/eliftech-test/cart', current: false },
+      { id: '004', name: 'Profile', href: '/eliftech-test/profile', current: false }
    ];
 
    const classNames = (...classes) => {
@@ -138,66 +138,10 @@ const Header = () => {
                      </div>
                   </div>
                </div>
-
-               <Disclosure.Panel className='sm:hidden'>
-                  <div className='space-y-1 px-2 pb-3 pt-2'>
-                     {navigation.map((item) => (
-                        <Disclosure.Button
-                           key={item.id}
-                           as='a'
-                           href={item.href}
-                           className={classNames(
-                              item.current
-                                 ? 'bg-gray-900 text-white'
-                                 : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                              'block rounded-md px-3 py-2 text-base font-medium'
-                           )}
-                           aria-current={item.current ? 'page' : undefined}
-                        >
-                           {item.name}
-                        </Disclosure.Button>
-                     ))}
-                  </div>
-               </Disclosure.Panel>
             </>
          )}
       </Disclosure>
    );
-
-   // return (
-   //    <div className={styles.header}>
-   //       <nav className='relative left-1/2 z-10 mt-5 flex w-screen max-w-max -translate-x-1/2 px-4'>
-   //          <ul className='mt-1 flex h-11 w-21 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white'>
-   //             <li className=''>
-   //                <NavLink className='text-sky-500 hover:text-sky-600 border-2 m-1 p-4' to='/shop'>
-   //                   Shop
-   //                </NavLink>
-   //             </li>
-   //             <span className='m-0'> </span>
-
-   //             <li>
-   //                <NavLink className='text-sky-500 hover:text-sky-600 border-2 m-1 p-4' to='/cart'>
-   //                   Shopping Cart
-   //                </NavLink>
-   //             </li>
-   //             <span className='m-0'> </span>
-
-   //             <li>
-   //                <NavLink className='text-sky-500 hover:text-sky-600 border-2 m-1 p-4' to='#'>
-   //                   2121312 Cart
-   //                </NavLink>
-   //             </li>
-   //             <span className='m-0'> </span>
-
-   //             <li>
-   //                <NavLink className='text-sky-500 hover:text-sky-600 border-2 m-1 p-4' to='#'>
-   //                   Exit
-   //                </NavLink>
-   //             </li>
-   //          </ul>
-   //       </nav>
-   //    </div>
-   // );
 };
 
 export default Header;
