@@ -17,29 +17,44 @@ const MenuPage = () => {
 
    return (
       <div className='flex'>
-         <section className='flex flex-col w-1/3'>
-            <h3 className='mx-auto mt-6 mb-4'>Shops:</h3>
-            <ul>
-               {shopNames.map((name) => {
-                  const selected = name === activeShop ? 'active' : '';
-                  return (
-                     <li
-                        className={`${selected} block box-border mx-auto my-4 text-center py-4 border border-gray-500 bg-white hover:bg-gray-100 active:bg-gray-300 cursor-pointer rounded-md w-auto max-w-80`}
-                        key={name}
-                        onClick={() => setActiveShop(name)}
-                     >
-                        {name}
-                     </li>
-                  );
-               })}
-            </ul>
+         <section className='h-full w-1/3'>
+            <h3 className='mx-auto mt-6 mb-4 w-1/2 pl-4 font-semibold'>Select shop:</h3>
+
+            <nav className='relative flex flex-col m-8 mx-auto w-1/2 bg-white shadow'>
+               <ul className='relative m-0 list-none px-[0.2rem]'>
+                  {shopNames.map((name) => {
+                     const selected = name === activeShop ? 'text-orange-500 font-semibold bg-slate-100' : '';
+                     return (
+                        <li className={`${selected} relative`} key={name} onClick={() => setActiveShop(name)}>
+                           <div className='flex h-12 cursor-pointer items-center truncate rounded-[5px] px-6 py-4 outline-none transition duration-300 hover:bg-slate-50 hover:font-semibold hover:outline-none focus:bg-slate-50 focus:text-inherit focus:outline-none active:bg-slate-100 active:text-inherit active:outline-none'>
+                              <span className='mr-4 [&>svg]:h-6 [&>svg]:w-6 [&>svg]:text-gray-400'>
+                                 <svg
+                                    xmlns='http://www.w3.org/2000/svg'
+                                    viewBox='0 0 24 24'
+                                    fill='currentColor'
+                                    className='h-4 w-4'
+                                 >
+                                    <path
+                                       fill-rule='evenodd'
+                                       d='M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm-2.625 6c-.54 0-.828.419-.936.634a1.96 1.96 0 00-.189.866c0 .298.059.605.189.866.108.215.395.634.936.634.54 0 .828-.419.936-.634.13-.26.189-.568.189-.866 0-.298-.059-.605-.189-.866-.108-.215-.395-.634-.936-.634zm4.314.634c.108-.215.395-.634.936-.634.54 0 .828.419.936.634.13.26.189.568.189.866 0 .298-.059.605-.189.866-.108.215-.395.634-.936.634-.54 0-.828-.419-.936-.634a1.96 1.96 0 01-.189-.866c0-.298.059-.605.189-.866zm2.023 6.828a.75.75 0 10-1.06-1.06 3.75 3.75 0 01-5.304 0 .75.75 0 00-1.06 1.06 5.25 5.25 0 007.424 0z'
+                                       clip-rule='evenodd'
+                                    />
+                                 </svg>
+                              </span>
+                              <span>{name}</span>
+                           </div>
+                        </li>
+                     );
+                  })}
+               </ul>
+            </nav>
          </section>
-         <section className={`${styles.shopMenu} w-2/3`}>
+         <section className={`${styles.shopMenu} flex flex-wrap w-2/3 h-svh overflow-y-scroll`}>
             {shopMenu[activeShop].map(({ NAME, PRICE, IMG_SRC }) => {
                const MenuImage = IMG_SRC ? require(`../${IMG_SRC}`) : Plate;
 
                return (
-                  <div className={styles.shopMenu__item} key={NAME}>
+                  <div className='flex flex-col' key={NAME}>
                      <img className={styles.shopMenu__item_image} src={MenuImage} alt={NAME} />
 
                      <div className={styles.shopMenu__item_frame}>
