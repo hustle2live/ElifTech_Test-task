@@ -16,15 +16,15 @@ const MenuPage = () => {
    const cartState = useSelector((store) => store.cart);
 
    return (
-      <div className={styles.wrapper}>
-         <section className={styles.shopList}>
-            <h1 className={styles.shopList__heading}>Shops:</h1>
+      <div className='flex'>
+         <section className='flex flex-col w-1/3'>
+            <h3 className='mx-auto mt-6 mb-4'>Shops:</h3>
             <ul>
                {shopNames.map((name) => {
                   const selected = name === activeShop ? 'active' : '';
                   return (
                      <li
-                        className={`${styles.shopList__listElement} ${selected}`}
+                        className={`${selected} block box-border mx-auto my-4 text-center py-4 border border-gray-500 bg-white hover:bg-gray-100 active:bg-gray-300 cursor-pointer rounded-md w-auto max-w-80`}
                         key={name}
                         onClick={() => setActiveShop(name)}
                      >
@@ -34,7 +34,7 @@ const MenuPage = () => {
                })}
             </ul>
          </section>
-         <section className={styles.shopMenu}>
+         <section className={`${styles.shopMenu} w-2/3`}>
             {shopMenu[activeShop].map(({ NAME, PRICE, IMG_SRC }) => {
                const MenuImage = IMG_SRC ? require(`../${IMG_SRC}`) : Plate;
 
