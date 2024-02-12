@@ -90,28 +90,30 @@ const MenuPage = () => {
             </section>
             <section className={`${styles.shopMenu} w-3/4 h-svh`}>
                <ul className={`${styles.shopMenu} flex flex-wrap overflow-y-scroll -my-6 p-6 xl:p-12 xl:pb-24`}>
-                  {shopMenu[activeShop].map(({ NAME, PRICE, IMG_SRC }) => {
+                  {shopMenu[activeShop].map(({ NAME, PRICE, DESCRIPTION, IMG_SRC }) => {
                      const MenuImage = IMG_SRC ? require(`../${IMG_SRC}`) : Plate;
 
                      return (
                         <li
-                           className='relative flex flex-col w-72 bg-white border border-slate-200 overflow-hidden hover:border-slate-400 hover:scale-105 hover:z-10 hover:shadow-xl'
+                           className='relative flex flex-col w-72 h-72 bg-gray-50 border border-slate-200 overflow-hidden hover:border-slate-400 hover:scale-105 hover:z-10 hover:shadow-xl'
                            key={NAME}
                         >
                            <img
-                              className='block box-border -mt-4 -ml-4 rounded-full w-32 h-32 shadow-md'
+                              className='block box-border -mt-4 -ml-4 rounded-full w-32 h-32 min-w-32 min-h-32 shadow-md'
                               src={MenuImage}
                               alt={NAME}
                            />
 
-                           <div className={styles.shopMenu__item_frame}>
-                              <h4 className={styles.shopMenu__item_name}>{NAME}</h4>
+                           {/* <div className={styles.shopMenu__item_frame}> */}
+                           <div className='flex flex-col p-0 min-h-32 h-full left-72 top-14 mx-4 my-4'>
+                              <h4 className='line-clamp-2 leading-5'>{NAME}</h4>
+                              <p className='my-2 font-thin text-sm line-clamp-1 leading-4'>{DESCRIPTION}</p>
 
-                              <p className={styles.shopMenu__item_price}>{PRICE}</p>
+                              <p className='text-lg font-bold tracking-wider'>${PRICE}</p>
 
                               {!cartState.find((item) => item.NAME === NAME) ? (
                                  <button
-                                    className='relative m-auto mr-0 mb-2 z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium hover:bg-gray-100 border hover:shadow-md'
+                                    className='justify-self-end self-end m-auto mr-0 mb-2 z-10 rounded-full bg-gray-50 px-3 py-1.5 font-medium hover:bg-gray-100 border hover:shadow-md'
                                     onClick={(e) =>
                                        dispatch(dishAdded({ NAME, PRICE, IMG_SRC: IMG_SRC ? `${IMG_SRC}` : null }))
                                     }
