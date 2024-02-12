@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import { dishRemoved, setQuantity, getTotalPrice, orderRegister } from '../redux/cartReducer';
 
-import { MinusSmallIcon, MinusCircleIcon, PlusCircleIcon } from '@heroicons/react/24/outline';
 import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/20/solid';
 
 import Plate from '../images/plate.png';
@@ -176,7 +175,6 @@ const ShoppingCart = () => {
 
                                  <div className='flex border-2 rounded-md gap-0 -ml-2 mr-2'>
                                     <input
-                                       id='quantity'
                                        value={QUANTITY}
                                        type='number'
                                        min={0}

@@ -5,8 +5,6 @@ import { Fragment } from 'react';
 import { Disclosure, Menu, Transition } from '@headlessui/react';
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline';
 
-import styles from '../index.module.scss';
-
 const Header = () => {
    const navigation = [
       { id: '001', name: 'Main', href: '/', current: false },

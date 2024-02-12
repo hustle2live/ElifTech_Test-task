@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 
 import { useDispatch, useSelector } from 'react-redux';
 
-import styles from '../index.module.scss';
 import shopMenu from '../mockData/data.json';
 import Plate from '../images/plate.png';
 
@@ -86,8 +85,8 @@ const MenuPage = () => {
                   </ul>
                </nav>
             </section>
-            <section className={`${styles.shopMenu} w-3/4 h-svh`}>
-               <ul className={`${styles.shopMenu} flex flex-wrap overflow-y-scroll -my-6 p-6 xl:p-12 xl:pb-24`}>
+            <section className='w-3/4 h-svh'>
+               <ul className='flex flex-wrap overflow-y-scroll -my-6 p-6 xl:p-12 xl:pb-24'>
                   {shopMenu[activeShop].map(({ NAME, PRICE, DESCRIPTION, IMG_SRC }) => {
                      const MenuImage = IMG_SRC ? require(`../${IMG_SRC}`) : Plate;
 
