@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from 'react-redux';
 
 import { dishRemoved, setQuantity, getTotalPrice, orderRegister } from '../redux/cartReducer';
 
-import { XMarkIcon } from '@heroicons/react/20/solid';
 
 import Plate from '../images/plate.png';
 import styles from '../index.module.scss';
