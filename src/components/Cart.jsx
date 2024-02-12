@@ -50,7 +50,7 @@ const ShoppingCart = () => {
          <div className='flex flex-wrap flex-col-reverse lg:flex-row lg:flex-nowrap relative bg-gray-50 border-gray-900/10 m-0 sm:m-8 md:m-14 lg:mx-32 lg:gap-12 p-12 pl-0 border-2 rounded-md'>
             <div className='w-full mt-12 lg:mt-0 lg:w-1/2 block'>
                <h2 className='ml-12 text-lg font-semibold leading-7 text-gray-900'>Contact information</h2>
-               <form className='m-12 mr-6 mt-0 p-0'>
+               <form id='form' className='m-12 mr-6 mt-0 p-0'>
                   <div className='mt-4'>
                      <label className='block text-sm font-medium leading-6 text-gray-900' htmlFor='userEmail'>
                         Email address:
@@ -175,6 +175,7 @@ const ShoppingCart = () => {
 
                                  <div className='flex border-2 rounded-md gap-0 -ml-2 mr-2'>
                                     <input
+                                       name='item-quantity'
                                        value={QUANTITY}
                                        type='number'
                                        min={0}
@@ -220,6 +221,7 @@ const ShoppingCart = () => {
 
                <div className='block w-full bg-white p-8'>
                   <input
+                     id='formSubmitButton'
                      className='block mx-auto w-48 lg:w-64 rounded bg-orange-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-orange-600 active:bg-orange-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900'
                      type='submit'
                      value='Confirm Order'
