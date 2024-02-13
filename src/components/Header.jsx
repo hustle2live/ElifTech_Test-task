@@ -7,7 +7,7 @@ import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline';
 
 const Header = () => {
    const navigation = [
-      { id: '001', name: 'Main', href: '/eliftech-test/main', current: false },
+      { id: '001', name: 'Main', href: '/eliftech-test/', current: false },
       { id: '002', name: 'Shop Menu', href: '/eliftech-test/shop', current: false },
       { id: '003', name: 'Shopping Cart', href: '/eliftech-test/cart', current: false },
       { id: '004', name: 'Profile', href: '/eliftech-test/profile', current: false }

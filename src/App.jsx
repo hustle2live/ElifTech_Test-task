@@ -15,7 +15,7 @@ const App = () => {
          <Header />
          <Routes>
             <Route
-               path='/eliftech-test/main'
+               path='/eliftech-test/'
                element={
                   <div className='m-8 text-lg'>
                      <p>
